@@ -61,7 +61,6 @@ function Header({ session, onLogout, onShowAdd, onShowFavs, search, setSearch, f
       <div className="max-w-6xl mx-auto px-4 py-3 flex items-center gap-3">
         <BookOpen className="w-6 h-6" />
         <h1 className="text-xl font-bold">Textbook Exchange</h1>
-        <p></p>
         <div className="flex-1" />
         <div className="flex items-center gap-2 w-full max-w-xl">
           <div className="relative flex-1">
@@ -72,14 +71,12 @@ function Header({ session, onLogout, onShowAdd, onShowFavs, search, setSearch, f
               placeholder="Search title, author, course..."
               className="btn w-full pl-9 pr-10 py-2 rounded-2xl focus:outline-none focus:ring"
             />
-            
             <button
               className="btn btn-sm absolute right-2 to /2 -translate-y-1/2 p-1 hover:bg-gray-100 rounded"
               onClick={() => setFiltersOpen(!filtersOpen)}
               title="Filters"
             >
               <Filter className="w-4 h-4" />
-              <p></p>
             </button>
           </div>
         </div>
@@ -131,15 +128,11 @@ function Auth({ onLoggedIn, users, setUsers }) {
           {mode === "register" && (
             <input className="btn w-full rounded-xl px-3 py-2" placeholder="Full name" value={name} onChange={(e) => setName(e.target.value)} />
           )}
-          <p></p>
           <input className="btn w-full rounded-xl px-3 py-2" placeholder="Email" type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
           {mode === "register" && (
-        
             <input className="btn w-full rounded-xl px-3 py-2" placeholder="Phone / WhatsApp" value={phone} onChange={(e) => setPhone(e.target.value)} />
           )}
-          <p></p>
           <input className="btn w-full rounded-xl px-3 py-2" placeholder="Password" type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
-          <p></p>
           <button className="btn btn-primary w-full">{mode === "login" ? "Login" : "Register"}</button>
         </form>
         <div className="text-sm text-center mt-4">
@@ -148,13 +141,9 @@ function Auth({ onLoggedIn, users, setUsers }) {
           ) : (
             <button className="underline" onClick={() => setMode("login")}>Have an account? Login</button>
           )}
-
         </div>
-        
-        
       </div>
-      
-      <p className="text-xs text-gray-500 mt-3">Copyright 2025   Created By GROUP J</p>
+      <p className="text-xs text-gray-500 mt-3">Demo note: passwords are stored in localStorage for demo purposes only. Do not use real credentials.</p>
     </div>
   );
 }
@@ -391,7 +380,7 @@ export default function App() {
           <>
             <div className="mb-4">
               <div className="flex items-center gap-2">
-                <span className="text-sm text-gray-600">Logged in as : </span>
+                <span className="text-sm text-gray-600">Logged in as</span>
                 <span className="px-2 py-1 rounded-xl bg-gray-100 text-sm">{session.name}</span>
               </div>
             </div>
@@ -449,8 +438,11 @@ export default function App() {
         )}
       </main>
 
-     
-       
+      <footer className="max-w-6xl mx-auto px-4 py-10 text-sm text-gray-500">
+        <div className="btn rounded-3xl p-4 text-center">
+          <p><strong>Student Project Demo</strong> — Data is stored locally in your browser (localStorage). For a production app, connect a backend (Node, PHP, or Django) and a real database (MySQL/PostgreSQL/MongoDB).</p>
+        </div>
+      </footer>
     </div>
   );
 }
