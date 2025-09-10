@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/textbook_exchange/static/css/main.b117a0aa.css",
+    "main.js": "/textbook_exchange/static/js/main.f2951c9e.js",
+    "index.html": "/textbook_exchange/index.html",
+    "main.b117a0aa.css.map": "/textbook_exchange/static/css/main.b117a0aa.css.map",
+    "main.f2951c9e.js.map": "/textbook_exchange/static/js/main.f2951c9e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b117a0aa.css",
+    "static/js/main.f2951c9e.js"
+  ]
+}
